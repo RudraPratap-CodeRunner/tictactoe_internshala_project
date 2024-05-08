@@ -1,13 +1,13 @@
-import React from 'react'
-import Board from './components/Board'
-import './styles.scss';
+import React, { useState } from "react";
+import Board from "./components/Board";
+import "./styles.scss";
 
 const App = () => {
   return (
-    <div>
-      <Board/>
+    <div className="app">
+      <Board />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
