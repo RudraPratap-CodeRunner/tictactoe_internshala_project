@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Square from "./Square";
 
-function Board({squares,handleSquareClick}) {
- 
-  
-  
-
+function Board({ squares, handleSquareClick }) {
   const renderSquare = (position) => {
     return (
       <Square
@@ -14,8 +10,6 @@ function Board({squares,handleSquareClick}) {
       />
     );
   };
- ;
-
   return (
     <div className="board">
       <div className="board-row">
@@ -38,4 +32,3 @@ function Board({squares,handleSquareClick}) {
 }
 
 export default Board;
-
