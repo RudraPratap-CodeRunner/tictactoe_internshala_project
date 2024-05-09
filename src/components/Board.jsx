@@ -1,15 +1,18 @@
-import React, { useState } from "react";
-import Square from "./Square";
+import Square from './Square';
 
-function Board({ squares, handleSquareClick }) {
-  const renderSquare = (position) => {
+const Board = ({ squares, handleSquareClick, winningSquares }) => {
+  const renderSquare = position => {
+    const isWinningSquare = winningSquares.includes(position);
+
     return (
       <Square
         value={squares[position]}
         onClick={() => handleSquareClick(position)}
+        isWinningSquare={isWinningSquare}
       />
     );
   };
+
   return (
     <div className="board">
       <div className="board-row">
@@ -29,6 +32,6 @@ function Board({ squares, handleSquareClick }) {
       </div>
     </div>
   );
-}
+};
 
 export default Board;
